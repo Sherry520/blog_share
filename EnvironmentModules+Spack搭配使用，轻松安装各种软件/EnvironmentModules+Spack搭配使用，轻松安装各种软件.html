@@ -3,7 +3,7 @@
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       
-      <link rel="stylesheet" href="file:///c:\Users\GYH\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.14\crossnote\dependencies\katex\katex.min.css">
+      <link rel="stylesheet" href="file:///c:\Users\GYH\.vscode\extensions\shd101wyy.markdown-preview-enhanced-0.8.15\crossnote\dependencies\katex\katex.min.css">
       
       
       
@@ -152,7 +152,10 @@
 <p>以Ubuntu22.04为例</p>
 <pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token function">sudo</span> <span class="token function">apt</span> update
 <span class="token function">sudo</span> <span class="token function">apt</span> <span class="token function">install</span> build-essential ca-certificates coreutils <span class="token function">curl</span> environment-modules gfortran <span class="token function">git</span> gpg lsb-release python3 python3-distutils python3-venv <span class="token function">unzip</span> <span class="token function">zip</span>
-</code></pre><h2 id="2安装">2.安装 </h2>
+</code></pre><p><em><strong>Python3</strong></em>【可选】：如果你的默认<code>python</code>不是<code>python3</code>，通过<code>conda</code>或者其他方法安装后，设置环境变量文件<code>vim ~/.bashrc</code>，添加以下内容，指向你系统上可用的<code>python3</code>：</p>
+<pre data-role="codeBlock" data-info="bash" class="language-bash bash"><code><span class="token builtin class-name">export</span> <span class="token assign-left variable">SPACK_PYTHON</span><span class="token operator">=~</span>/software/miniconda3/bin/python3
+</code></pre><p><code>source ~/.bashrc</code>或重新登录使之生效。</p>
+<h2 id="2安装">2.安装 </h2>
 <p>从github下载软件包</p>
 <pre data-role="codeBlock" data-info="" class="language-text"><code># 这里我把软件安装到 $HOME/software中
 mkdir software &amp;&amp; cd software

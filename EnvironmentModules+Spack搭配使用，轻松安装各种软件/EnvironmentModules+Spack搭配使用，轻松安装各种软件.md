@@ -43,6 +43,13 @@ sudo apt update
 sudo apt install build-essential ca-certificates coreutils curl environment-modules gfortran git gpg lsb-release python3 python3-distutils python3-venv unzip zip
 ```
 
+***Python3***【可选】：如果你的默认`python`不是`python3`，通过`conda`或者其他方法安装后，设置环境变量文件`vim ~/.bashrc`，添加以下内容，指向你系统上可用的`python3`：
+
+```bash
+export SPACK_PYTHON=~/software/miniconda3/bin/python3
+```
+`source ~/.bashrc`或重新登录使之生效。
+
 ## 2.安装
 
 从github下载软件包
