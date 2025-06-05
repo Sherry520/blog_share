@@ -30,6 +30,8 @@ ascp.exe: Failed to open TCP connection for SSH, exiting.
 Session Stop  (Error: Failed to open TCP connection for SSH)
 ```
 
+___
+
 ### 二、解决步骤
 
 #### 1. 问题诊断：
@@ -81,7 +83,9 @@ netsh advfirewall firewall add rule name="Aspera" dir=out action=allow protocol=
 netsh advfirewall set allprofiles state on  # 重新开启防火墙
 ```
 
+___
+
 这样问题就解决了。
-感谢[`Deepseekp`](https://chat.deepseek.com/)的帮助。
+感谢[`Deepseek`](https://chat.deepseek.com/)的帮助。
 
 如何还有有问题，欢迎在评论区留言。
