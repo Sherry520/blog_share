@@ -22,9 +22,6 @@ wget mirror.hust.edu.cn/gnu/gcc/gcc-8.3.0/gcc-8.3.0.tar.gz
 
 # 解压gcc安装包
 tar -zxf gcc-8.3.0.tar.gz
-
-# 创建gcc安装路径
-mkdir -p /usr/local/gcc-8.3.0
 ```
 
 # 2. 验证依赖
@@ -34,26 +31,21 @@ cd gcc-8.3.0
 ./contrib/download_prerequisites  # 缺失则重新下载
 ```
 
-# 3. 新建构建目录
+# 3. 配置（关键选项）
 ```bash
-mkdir ../gcc-build && cd ../gcc-build
-```
-
-# 4. 配置（关键选项）
-```bash
-../gcc-8.3.0/configure \
+../configure \
     --prefix=/usr/local/gcc-8.3.0 \
     --enable-threads=posix --disable-multilib \
     --enable-languages=c,c++,fortran \
     --disable-bootstrap
 ```
 
-# 5. 清除干扰变量
+# 4. 清除干扰变量
 ```
 unset LIBRARY_PATH CPATH C_INCLUDE_PATH PKG_CONFIG_PATH CPLUS_INCLUDE_PATH INCLUDE
 ```
 
-# 6. 编译安装
+# 5. 编译安装
 ```bash
 make -j8 | tee build.log  # 保存日志
 make install
