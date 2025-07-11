@@ -33,7 +33,7 @@ cd gcc-8.3.0
 
 # 3. 配置（关键选项）
 ```bash
-../configure \
+./configure \
     --prefix=/usr/local/gcc-8.3.0 \
     --enable-threads=posix --disable-multilib \
     --enable-languages=c,c++,fortran \
